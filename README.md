@@ -1,53 +1,26 @@
-\documentclass[12pt]{article}
-\usepackage[a4paper, margin=1in]{geometry}
-\usepackage{hyperref}
-\usepackage{enumitem}
-\usepackage{xcolor}
-\usepackage{listings}
-\usepackage{titlesec}
-\usepackage{lmodern}
+# 🕵️ Cookie Stuffing Scanner (Dockerized)
 
-\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
-
-\title{\textbf{🕵️ Cookie Stuffing Scanner (Dockerized)}}
-\author{}
-\date{}
-
-\begin{document}
-
-\maketitle
-
-\noindent
 This tool scans a list of URLs for suspicious affiliate cookie stuffing and logs any findings, screenshots, and HTML content.
 
-\section*{📦 Requirements}
-\begin{itemize}
-    \item Docker Desktop (Mac, Linux)
-    \item \texttt{urls.txt} with one URL per line
-\end{itemize}
+## 📦 Requirements
 
-\section*{🚀 Run the Scanner}
-\begin{lstlisting}[language=bash]
+- Docker Desktop (Mac, Linux)
+- `urls.txt` with one URL per line
+
+## 🚀 Run the Scanner
+
+```bash
 ./run.sh
-\end{lstlisting}
+```
 
-\noindent
 This will:
-\begin{itemize}
-    \item Build the Docker container
-    \item Mount your \texttt{urls.txt} and output paths
-    \item Run the scanner and save output to your local system
-\end{itemize}
+- Build the Docker container
+- Mount your `urls.txt` and output paths
+- Run the scanner and save output to your local system
 
-\section*{📥 Input}
-\begin{itemize}
-    \item \texttt{urls.txt}: A plain-text file with URLs to scan
-\end{itemize}
+## 📥 Input
+- `urls.txt`: A plain-text file with URLs to scan
 
-\section*{📤 Output}
-\begin{itemize}
-    \item \texttt{cookie_stuffing_report.csv}: CSV report of findings
-    \item \texttt{/screenshots/}: Screenshot + HTML capture of suspicious pages
-\end{itemize}
-
-\end{document}
+## 📤 Output
+- `cookie_stuffing_report.csv`: CSV report of findings
+- `/screenshots/`: Screenshot + HTML capture of suspicious pages
