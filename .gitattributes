@@ -1,2 +1,14 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Shift language stats toward Python by ignoring non-source files
+
+# Treat these as non-detectable or documentation
+*.html linguist-detectable=false
+*.sh linguist-detectable=false
+*.txt linguist-detectable=false
+*.csv linguist-detectable=false
+*.md linguist-documentation=true
+*.png linguist-detectable=false
+*.jpg linguist-detectable=false
+*.jpeg linguist-detectable=false
+
+# Explicitly mark Python files
+*.py linguist-language=Python
